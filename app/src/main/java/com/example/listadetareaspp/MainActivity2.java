@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,17 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-
+        eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String TareaEliminar=tarea_nueva.getText().toString();
+                if(lista.contains(TareaEliminar)){
+                    lista=lista.replace(eliminar + "\n", "");
+                    lista_tareas.setText(lista);
+                }else {
+                    Toast.makeText(MainActivity2.this,"La tarea no esta en la lista",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
