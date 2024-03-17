@@ -29,6 +29,7 @@ public class MainActivity2 extends AppCompatActivity {
         agregar=(Button) findViewById(R.id.btnAdd);
         tarea_nueva=(EditText) findViewById(R.id.etTarea);
         lista_tareas=(TextView) findViewById(R.id.txtLista);
+        eliminar=(Button) findViewById(R.id.btndelete);
 
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,5 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
                 lista_tareas.setText(lista);
             }
         });
+
+
     }
 }
