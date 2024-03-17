@@ -38,7 +38,7 @@
             android:layout_marginTop="15sp"/>
 
         <Button
-            android:id="@+id/btn_iniciar"
+            android:id="@+id/iniciar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="INICIAR"
