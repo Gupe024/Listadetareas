@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#8BC34A"
+        android:background="@drawable/shaoran"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
