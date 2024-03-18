@@ -38,23 +38,14 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 lista=lista_tareas.getText().toString();
+
                 tn=tarea_nueva.getText().toString();
                 lista=lista + "\n" +tn;
                 lista_tareas.setText(lista);
+                tarea_nueva.setText("");
+
             }
         });
 
-        eliminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String TareaEliminar=tarea_nueva.getText().toString();
-                if(lista.contains(TareaEliminar)){
-                    lista=lista.replace(eliminar + "\n", "");
-                    lista_tareas.setText(lista);
-                }else {
-                    Toast.makeText(MainActivity2.this,"La tarea no esta en la lista",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
     }
 }

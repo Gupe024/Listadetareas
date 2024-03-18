@@ -24,15 +24,17 @@
             android:id="@+id/usuario"
             android:layout_width="150dp"
             android:layout_height="48dp"
-            android:text="Usuario"
+            android:hint="Usuario"
+            android:inputType="text"
             android:textSize="14sp"
             android:textColor="#636262" />
 
         <EditText
-            android:id="@+id/txt_password"
+            android:id="@+id/password"
             android:layout_width="150dp"
             android:layout_height="48dp"
-            android:text="Password"
+            android:inputType="textPassword"
+            android:hint="Password"
             android:textSize="14sp"
             android:textColor="#636262"
             android:layout_marginTop="15sp"/>
