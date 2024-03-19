@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="INICIAR"
             android:layout_marginTop="40sp"
-            android:backgroundTint="#5366D3"/>
+            android:backgroundTint="#8BC34A"/>
 
     </LinearLayout>
 
