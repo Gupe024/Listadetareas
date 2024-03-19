@@ -40,7 +40,7 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agregar"
+        android:text="AGREGAR"
         android:layout_marginTop="120dp"
         android:layout_marginStart="270dp" />
 
@@ -48,7 +48,7 @@
         android:id="@+id/btndelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Eliminar"
+        android:text="ELIMINAR"
         android:layout_marginTop="170dp"
         android:layout_marginStart="270dp" />
 

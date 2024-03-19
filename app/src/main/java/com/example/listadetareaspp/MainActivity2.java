@@ -1,15 +1,17 @@
 package com.example.listadetareaspp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import java.util.ArrayList;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity {
     private EditText etTarea;
@@ -44,9 +46,9 @@ public class MainActivity2 extends AppCompatActivity {
         btndelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tareaSeleccionada = txtLista.getText().toString();
-                listaTareas.remove(tareaSeleccionada);
-                mostrarTareas();
+                if (!listaTareas.isEmpty()) {
+                    mostrarDialogoEliminar();
+                }
             }
         });
     }
@@ -58,4 +60,19 @@ public class MainActivity2 extends AppCompatActivity {
         }
         txtLista.setText(builder.toString());
     }
+
+    private void mostrarDialogoEliminar() {
+        final CharSequence[] tareas = listaTareas.toArray(new CharSequence[listaTareas.size()]);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Seleccione la tarea a eliminar");
+        builder.setItems(tareas, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                listaTareas.remove(which);
+                mostrarTareas();
+            }
+        });
+        builder.show();
+    }
 }
+
